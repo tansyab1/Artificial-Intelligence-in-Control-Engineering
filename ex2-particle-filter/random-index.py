@@ -6,22 +6,13 @@
 #------------------------------------------------------------------------------
 #	Function represents the process model
 #------------------------------------------------------------------------------
-def process_model(x, u, sigma_v, sigma_g):
+def random_index(W):
 	"""
 	[Arguments]
-		x : (ndarray) Current position, including x coordinate, y coordinate,
-			and angle (radian). The shape of x is (3, 1).
-
-		u : (ndarray) Control signal, including velocity and stearing angle
-			(radian). The shape of u is (2, 1).
-
-		sigma_v : (float) Standard deviation of velocity noise.
-
-		sigma_g : (float) Standard deviation of stearing angle noise.
+		W : (list) List of important factors.
 
 	[Return]
-		x_pred : (ndarray) Predicted position, including x coordinate, y
-			coordinate and angle (radian). The shape of x_pred is (3, 1).
+		idx : (int) Random index based on the given distribution of W.
 	"""
 	pass
 

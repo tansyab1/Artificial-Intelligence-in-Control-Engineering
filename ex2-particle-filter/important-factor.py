@@ -6,22 +6,22 @@
 #------------------------------------------------------------------------------
 #	Function represents the process model
 #------------------------------------------------------------------------------
-def process_model(x, u, sigma_v, sigma_g):
+def compute_important_factor(x, z, sigma_r, sigma_b):
 	"""
 	[Arguments]
 		x : (ndarray) Current position, including x coordinate, y coordinate,
 			and angle (radian). The shape of x is (3, 1).
 
-		u : (ndarray) Control signal, including velocity and stearing angle
-			(radian). The shape of u is (2, 1).
+		z : (ndarray) Ground truth of measurement, as described in the readme
+			file. The shape of z is (3, 5).
 
-		sigma_v : (float) Standard deviation of velocity noise.
+		sigma_r : (float) Standard deviation of the range noise of the lazer.
 
-		sigma_g : (float) Standard deviation of stearing angle noise.
+		sigma_b : (float) Standard deviation of the bearing angle noise
+			(radian) of the lazer.
 
 	[Return]
-		x_pred : (ndarray) Predicted position, including x coordinate, y
-			coordinate and angle (radian). The shape of x_pred is (3, 1).
+		w : (float) Important factor.
 	"""
 	pass
 

@@ -15,9 +15,9 @@ def process_model(x, u, sigma_v, sigma_g):
 		u : (ndarray) Control signal, including velocity and stearing angle
 			(radian). The shape of u is (2, 1).
 
-		sigma_v : (float) Standard deviation of velocity noise.
+		sigma_v : (float) Standard deviation of the velocity noise.
 
-		sigma_g : (float) Standard deviation of stearing angle noise.
+		sigma_g : (float) Standard deviation of the stearing angle noise.
 
 	[Return]
 		x_pred : (ndarray) Predicted position, including x coordinate, y
