@@ -34,8 +34,10 @@ def compute_important_factor(x, z, lm, sigma_r, sigma_b):
 		w : (float) Important factor.
 	"""
 	importance_factor = [] 
+	count = 0 
 	for i in range(5):
 		if not np.isnan(z[2,i]):
+			count = count + 1 
 			id_lm = int(z[2,i] - 1) 
 			xL = lm[0, id_lm]
 			yL = lm[1, id_lm]
@@ -48,6 +50,8 @@ def compute_important_factor(x, z, lm, sigma_r, sigma_b):
 			zt = np.array([[z[0,i]], [z[1,i]]]) 
 			w = distribution(z_pre, zt, sigma_r, sigma_b) 
 			importance_factor.append(w) 
+	total = np.sum(importance_factor) 
+	importance_factor = total/count
 	return importance_factor
 
 #------------------------------------------------------------------------------
